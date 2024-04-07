@@ -3,9 +3,9 @@ local null_ls = require("null-ls")
 
 local opts = {
   sources = {
-    require("none-ls.diagnostics.eslint_d"),
-    require("none-ls.formatting.eslint_d"),
-    require("none-ls.code_actions.eslint_d"),
+    --require("none-ls.diagnostics.eslint_d"),
+    -- require("none-ls.formatting.eslint_d"),
+    -- require("none-ls.code_actions.eslint_d"),
     null_ls.builtins.formatting.gofumpt,
     null_ls.builtins.formatting.goimports_reviser,
     null_ls.builtins.formatting.golines,

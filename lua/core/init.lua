@@ -42,6 +42,10 @@ opt.termguicolors = true
 opt.timeoutlen = 400
 opt.undofile = true
 
+
+-- Set relative number bydefault
+vim.wo.relativenumber = true
+
 -- interval for writing swap file to disk, also used by gitsigns
 opt.updatetime = 250
 
