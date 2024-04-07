@@ -41,7 +41,7 @@ local plugins = {
   },
   {
     "tpope/vim-fugitive",
-    vent = "VeryLazy",
+    event = "VeryLazy",
   },
   {
     "tpope/vim-rhubarb"
