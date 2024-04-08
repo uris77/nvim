@@ -143,3 +143,15 @@ local new_cmd = vim.api.nvim_create_user_command
 new_cmd("NvChadUpdate", function()
   require "nvchad.updater"()
 end, {})
+
+
+-------------------------------------------------------------------------------------------
+-- [[ Highlight on yank ]]
+local highlight_group = vim.api.nvim_create_augroup("YankHighLight", { clear = true})
+vim.api.nvim_create_autocmd("TextYankPost", {
+  callback = function ()
+    vim.highlight.on_yank()
+  end,
+  group = highlight_group,
+  pattern = "*",
+})
