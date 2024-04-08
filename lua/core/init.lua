@@ -149,8 +149,11 @@ end, {})
 -- [[ Highlight on yank ]]
 local highlight_group = vim.api.nvim_create_augroup("YankHighLight", { clear = true})
 vim.api.nvim_create_autocmd("TextYankPost", {
+  desc = "Highlight when yanking text",
   callback = function ()
-    vim.highlight.on_yank()
+    vim.highlight.on_yank({
+      timeout = 240,
+    })
   end,
   group = highlight_group,
   pattern = "*",
