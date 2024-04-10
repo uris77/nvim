@@ -18,7 +18,7 @@ local plugins = {
         "eslint-lsp",
         "eslint_d",
         "prettier",
-        "typescript-language-server"
+        "typescript-language-server",
       }
     }
   },
@@ -28,6 +28,10 @@ local plugins = {
       require "plugins.configs.lspconfig"
       require "custom.configs.lspcfg"
     end,
+    dependencies = {
+      -- support for dart hot reload on save
+			"RobertBrunhage/dart-tools.nvim",
+    },
   },
   {
     "olexsmir/gopher.nvim",
@@ -52,7 +56,11 @@ local plugins = {
       require("gitsigns").setup()
       require "custom.configs.gitsigns"
     end
-  }
+  },
+  {
+    "dart-lang/dart-vim-plugin",
+    event = "VeryLazy",
+  },
 }
 
 return plugins
