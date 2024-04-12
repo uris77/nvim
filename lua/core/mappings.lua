@@ -278,6 +278,7 @@ M.telescope = {
     ["<leader>fo"] = { "<cmd> Telescope oldfiles <CR>", "Find oldfiles" },
     ["<leader>fz"] = { "<cmd> Telescope current_buffer_fuzzy_find <CR>", "Find in current buffer" },
     ["<leader>gr"] = { "<cmd> Telescope lsp_references  <CR>", "Go to referneces" },
+    ["<leader>fs"] = { "<cmd> Telescope lsp_document_symbols <CR>", "Find all symbols in current document"},
 
     -- git
     ["<leader>cm"] = { "<cmd> Telescope git_commits <CR>", "Git commits" },
