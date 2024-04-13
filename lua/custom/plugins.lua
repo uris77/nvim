@@ -61,6 +61,19 @@ local plugins = {
     "dart-lang/dart-vim-plugin",
     event = "VeryLazy",
   },
+  {
+    "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim"},
+    opts = {
+      signs = false,
+    },
+  },
+  {
+    'echasnovski/mini.nvim',
+    config = function ()
+      require "custom.configs.mini"
+    end
+  }
 }
 
 return plugins
